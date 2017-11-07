@@ -8,6 +8,6 @@ If you are trying this for first time and haven't installed react before,Enter t
 After Globally installing React,
 - npm install - to install dependencies into project
 
-  npm start - command to run the project
+- npm start - command to run the project
   
 *You can also refer package.json file.
