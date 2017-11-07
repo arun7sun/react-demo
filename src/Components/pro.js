@@ -13,7 +13,7 @@ class Pro extends Component {
     }
     return (
       <div className="Pro">
-          <h4> Project Listings </h4>
+          <h4> Project Listing </h4>
         {pros}
       </div>
     );
