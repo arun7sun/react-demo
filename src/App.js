@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import uuid from 'uuid';
 import Pro from './Components/pro';
+import Table from './Components/table';
 import AddPro from './Components/addPro';
 import './App.css';
 
@@ -42,7 +43,8 @@ class App extends Component {
     return (
       <div className="App">
         <AddPro addpro={this.handleAddPro.bind(this)} /> <br/>
-        <Pro pro={this.state.pro}/>
+        <Pro pro={this.state.pro}/><br/>
+        <Table pro={this.state.pro}/>
       </div>
     );
   }
