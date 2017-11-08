@@ -15,17 +15,17 @@ class App extends Component {
   componentWillMount(){
     this.setState({pro:[
       {
-        id:uuid.v4,
+        id:uuid.v4(),
         title:'Employee Login',
         category:'Web Design'
       },
       {
-        id:uuid.v4,
+        id:uuid.v4(),
         title:'Social App',
         category: 'Andriod Dev'
       },
       {
-        id:uuid.v4,
+        id:uuid.v4(),
         title:'Ecomm app',
         category: 'Web Dev'
       }

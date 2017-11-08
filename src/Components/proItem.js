@@ -6,8 +6,10 @@ class ProItem extends Component {
     return (
       <div className="ProItem">
       <table>
+        <tbody>
         <tr><th >{this.props.project.title}</th>
         <td>{this.props.project.category}</td></tr>
+      </tbody>
       </table>
       </div>
 

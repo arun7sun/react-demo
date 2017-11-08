@@ -15,7 +15,7 @@ class AddPro extends Component {
 
     handleSubmit(e){
         this.setState({newPro:{
-            id:uuid.v4,
+            id:uuid.v4(),
             title: this.refs.title.value,
             category: this.refs.category.value,
         }},function(){
