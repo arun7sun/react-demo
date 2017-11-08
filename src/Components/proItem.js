@@ -4,9 +4,13 @@ class ProItem extends Component {
   render() {
 
     return (
-      <li className="ProItem">
-        <strong>{this.props.project.title}</strong> : {this.props.project.category}
-      </li>
+      <div className="ProItem">
+      <table>
+        <tr><th >{this.props.project.title}</th>
+        <td>{this.props.project.category}</td></tr>
+      </table>
+      </div>
+
     );
   }
 }
