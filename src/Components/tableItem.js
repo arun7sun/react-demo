@@ -12,12 +12,12 @@ class TableItem extends Component {
                 <tr>
                     <th>ID</th>
                     <th>Name</th>
-                    <th>EMAIL</th>
+                    <th>Email</th>
                     <th>Company</th>
-                    <th>CITY</th>
+                    <th>City</th>
                 </tr>
                 <tr >
-                    <td >{this.props.user.id}</td>
+                    <td>{this.props.user.id}</td>
                     <td>{this.props.user.name}</td>
                     <td>{this.props.user.email}</td>
                     <td>{this.props.user.company.name}</td>
