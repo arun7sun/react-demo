@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import uuid from 'uuid';
+import $ from 'jquery';
 import Pro from './Components/pro';
 import Table from './Components/table';
 import AddPro from './Components/addPro';
@@ -9,10 +10,12 @@ class App extends Component {
   constructor(){
     super();
     this.state = {
-      pro:[]
+      pro:[],
+      users:[]
     }
   }
-  componentWillMount(){
+
+  getProj(){
     this.setState({pro:[
       {
         id:uuid.v4(),
@@ -31,13 +34,37 @@ class App extends Component {
       }
     ]});
   }
+  getUsers(){
+      $.ajax({
+        url: 'https://jsonplaceholder.typicode.com/users',
+        dataType: 'json',
+        cache: false,
+         success: function(data){
+            this.setState({users: data}, function(){
+              console.log(this.state.users);
+            });
+         }.bind(this),
+         error: function(xhr, status, err){
+           console.log("error: ", err);
+         }
+      });
+  }
+
+  componentWillMount(){
+    this.getProj();
+    
+  }
+
+  componentDidMount(){
+    this.getUsers(); //Getting API data and displayed in Console alone
+  }
 
   handleAddPro(project){
     let pro = this.state.pro;
     pro.push(project);
     this.setState({pro:pro});
-
   }
+
   handleDeletePro(id){
     let pro = this.state.pro;
     let index = pro.findIndex(x => x.id === id);
