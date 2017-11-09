@@ -30,7 +30,7 @@ class AddPro extends Component {
         });
     return (
       <div>
-          <h3>Add a Pro</h3>
+          <h3>Add a Project</h3>
           <form onSubmit={this.handleSubmit.bind(this)}>
               <div>
                   <label>Title:</label><br />

@@ -71,13 +71,21 @@ class App extends Component {
     pro.splice(index,1);
     this.setState({pro:pro});
   }
+  
+  uname() {
+    let user = {
+      name: "ArunKumar"
+    }
+    return user.name;
+  }
 
   render() {
     return (
       <div className="App">
+      <h3>Hello {this.uname()}</h3>
         <AddPro addpro={this.handleAddPro.bind(this)} /> <br/>
         <Pro pro={this.state.pro} onDelete={this.handleDeletePro.bind(this)}/><br/>
-        <Table pro={this.state.pro}/>
+        <Table users={this.state.users}/>
       </div>
     );
   }

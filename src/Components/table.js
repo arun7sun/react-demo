@@ -1,15 +1,21 @@
 import React, { Component } from 'react';
 import '../App.css';
+import TableItem from './tableItem';
 
 class Table extends Component {
   render() {
+    let users;
+    if(this.props.users){
+      users = this.props.users.map(user =>{
+         return (
+            <TableItem key={user.id} user={user}/>
+         );
+      });
+    }
         return (
-      <table className="Table" >
-          <tbody>
-          <tr><th >Projects</th></tr>
-          <tr><td>Category</td></tr>
-          </tbody>
-      </table>
+      <div className="Table">
+          {users}
+      </div>
     );
   }
 }

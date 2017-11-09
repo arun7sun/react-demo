@@ -22,13 +22,14 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
-table, th, td{
-  border: 0.5px solid blue;
-}
 .button{
   border-radius: 5px;
   font-size: 10px;
   background-color: #f44336;
   border: none;
   color: white;
+}
+table{
+  border: dotted;
+  margin: 2px;
 }
