@@ -1,19 +1,18 @@
 import React, { Component } from 'react';
+import '../App.css';
 
 class ProItem extends Component {
-  render() {
+  deletePro(id){
+    this.props.onDelete(id);
+  }
 
+  render() {
+    
     return (
-      <div className="ProItem">
-      <table>
-        <tbody>
-        <tr>
-        <th>{this.props.project.title}</th>
-        <td>{this.props.project.category}</td>
-        </tr>
-      </tbody>
-      </table>
-      </div>
+      <li className="ProItem">
+        <strong>{this.props.project.title}</strong>:::{this.props.project.category}&nbsp; &nbsp;
+        <button className="button" onClick={this.deletePro.bind(this,this.props.project.id)}>X</button>
+      </li>
 
     );
   }

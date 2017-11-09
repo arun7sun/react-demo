@@ -38,12 +38,18 @@ class App extends Component {
     this.setState({pro:pro});
 
   }
+  handleDeletePro(id){
+    let pro = this.state.pro;
+    let index = pro.findIndex(x => x.id === id);
+    pro.splice(index,1);
+    this.setState({pro:pro});
+  }
 
   render() {
     return (
       <div className="App">
         <AddPro addpro={this.handleAddPro.bind(this)} /> <br/>
-        <Pro pro={this.state.pro}/><br/>
+        <Pro pro={this.state.pro} onDelete={this.handleDeletePro.bind(this)}/><br/>
         <Table pro={this.state.pro}/>
       </div>
     );
