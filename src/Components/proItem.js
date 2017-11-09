@@ -7,8 +7,10 @@ class ProItem extends Component {
       <div className="ProItem">
       <table>
         <tbody>
-        <tr><th >{this.props.project.title}</th>
-        <td>{this.props.project.category}</td></tr>
+        <tr>
+        <th>{this.props.project.title}</th>
+        <td>{this.props.project.category}</td>
+        </tr>
       </tbody>
       </table>
       </div>

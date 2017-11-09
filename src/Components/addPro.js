@@ -34,7 +34,7 @@ class AddPro extends Component {
           <form onSubmit={this.handleSubmit.bind(this)}>
               <div>
                   <label>Title:</label><br />
-                  <input type="text" placeholder="Enter Title" ref="title"  />
+                  <input type="text" placeholder="Enter Title!!!" ref="title"  />
               </div>
               <div>
                   <label>Category:</label><br />
