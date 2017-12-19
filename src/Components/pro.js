@@ -5,6 +5,8 @@ class Pro extends Component {
   deletePro(id){
     this.props.onDelete(id);
   }
+
+  
   render() {
     let pros;
     if(this.props.pro){

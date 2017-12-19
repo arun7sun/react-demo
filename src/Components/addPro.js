@@ -24,6 +24,8 @@ class AddPro extends Component {
         e.preventDefault();
     }
 
+    
+
   render() {
         let categoryOptions = this.props.categories.map(category => {
             return <option key={category} value={category}>{category}</option>
