@@ -1,4 +1,10 @@
 import { createStore } from "redux";
+import React, { Component } from 'react';
 
-const store = createStore;
-console.log(store);
+class Sample extends Component {
+ render(){
+    let store = createStore;
+    return state;
+ }
+}
+export default Sample;

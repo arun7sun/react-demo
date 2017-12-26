@@ -4,6 +4,7 @@ import $ from 'jquery';
 import Pro from './Components/pro';
 import Table from './Components/table';
 import AddPro from './Components/addPro';
+import Sample from './Components/Sample';
 import './App.css';
 
 class App extends Component {
@@ -86,6 +87,7 @@ class App extends Component {
         <AddPro addpro={this.handleAddPro.bind(this)} /> <br/>
         <Pro pro={this.state.pro} onDelete={this.handleDeletePro.bind(this)}/><br/>
         <Table users={this.state.users}/>
+        <Sample />
       </div>
     );
   }
